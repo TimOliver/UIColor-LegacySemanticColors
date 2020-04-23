@@ -14,10 +14,10 @@ static UIUserInterfaceStyle _legacyStyle = UIUserInterfaceStyleLight;
 // ##########################################################
 
 #define UIColorFromRGB(rgbValue) \
-            [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 24))/255.0 \
-                            green:((float)((rgbValue & 0x00FF00) >> 16))/255.0 \
-                             blue:((float)((rgbValue & 0x0000FF) >>  8))/255.0 \
-                            alpha:((float)((rgbValue & 0x0000FF) >>  0))/255.0]
+            [UIColor colorWithRed:((float)((rgbValue & 0xFF000000) >> 24))/255.0 \
+                            green:((float)((rgbValue & 0x00FF0000) >> 16))/255.0 \
+                             blue:((float)((rgbValue & 0x0000FF00) >>  8))/255.0 \
+                            alpha:((float)((rgbValue & 0x000000FF) >>  0))/255.0]
 
 // ##########################################################
 
@@ -62,7 +62,38 @@ static inline UIColor *UIColorLegacyColorForStyle(NSUInteger lightColor, NSUInte
 
 + (void)implementNewColorSelectors
 {
+    const char *args = "@:@";
+    Class class = object_getClass((id)self);
+    class_addMethod(class, @selector(systemGray2Color), (IMP)UIColorSystemGray2Color, args);
+    class_addMethod(class, @selector(systemGray3Color), (IMP)UIColorSystemGray3Color, args);
+    class_addMethod(class, @selector(systemGray4Color), (IMP)UIColorSystemGray4Color, args);
+    class_addMethod(class, @selector(systemGray5Color), (IMP)UIColorSystemGray5Color, args);
+    class_addMethod(class, @selector(systemGray6Color), (IMP)UIColorSystemGray5Color, args);
     
+    class_addMethod(class, @selector(labelColor), (IMP)UIColorLabelColor, args);
+    class_addMethod(class, @selector(secondaryLabelColor), (IMP)UIColorSecondaryLabelColor, args);
+    class_addMethod(class, @selector(tertiaryLabelColor), (IMP)UIColorTertiaryLabelColor, args);
+    class_addMethod(class, @selector(quaternaryLabelColor), (IMP)UIColorQuaternaryLabelColor, args);
+
+    class_addMethod(class, @selector(linkColor), (IMP)UIColorLinkColor, args);
+    
+    class_addMethod(class, @selector(placeholderTextColor), (IMP)UIColorPlaceholderTextColor, args);
+    
+    class_addMethod(class, @selector(separatorColor), (IMP)UIColorSeparatorColor, args);
+    class_addMethod(class, @selector(opaqueSeparatorColor), (IMP)UIColorOpaqueSeparatorColor, args);
+
+    class_addMethod(class, @selector(systemBackgroundColor), (IMP)UIColorSystemBackgroundColor, args);
+    class_addMethod(class, @selector(secondarySystemBackgroundColor), (IMP)UIColorSecondarySystemBackgroundColor, args);
+    class_addMethod(class, @selector(tertiarySystemBackgroundColor), (IMP)UIColorTertiarySystemBackgroundColor, args);
+    
+    class_addMethod(class, @selector(systemGroupedBackgroundColor), (IMP)UIColorSystemGroupedBackgroundColor, args);
+    class_addMethod(class, @selector(secondarySystemGroupedBackgroundColor), (IMP)UIColorSecondarySystemGroupedBackgroundColor, args);
+    class_addMethod(class, @selector(tertiarySystemGroupedBackgroundColor), (IMP)UIColorTertiarySystemGroupedBackgroundColor, args);
+
+    class_addMethod(class, @selector(systemFillColor), (IMP)UIColorSystemFillColor, args);
+    class_addMethod(class, @selector(secondarySystemFillColor), (IMP)UIColorSecondarySystemFillColor, args);
+    class_addMethod(class, @selector(tertiarySystemFillColor), (IMP)UIColorTertiarySystemFillColor, args);
+    class_addMethod(class, @selector(quaternarySystemFillColor), (IMP)UIColorQuaternarySystemFillColor, args);
 }
 
 #pragma mark - Swizzled Methods -
@@ -80,10 +111,36 @@ static inline UIColor *UIColorLegacyColorForStyle(NSUInteger lightColor, NSUInte
 
 #pragma mark - Added Methods -
 
-//UIColor *UIColorSystemGray2Color()
-//{
-//
-//}
+UIColor *UIColorSystemGray2Color(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xaeaeb2ff, 0x636366ff); }
+UIColor *UIColorSystemGray3Color(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xc7c7ccff, 0x48484aff); }
+UIColor *UIColorSystemGray4Color(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xd1d1d6ff, 0x3a3a3cff); }
+UIColor *UIColorSystemGray5Color(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xe5e5eaff, 0x2c2c2eff); }
+UIColor *UIColorSystemGray6Color(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xf2f2f7ff, 0x1c1c1eff); }
+
+UIColor *UIColorLabelColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x000000ff, 0xffffffff); }
+UIColor *UIColorSecondaryLabelColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x3c3c4399, 0xebebf599); }
+UIColor *UIColorTertiaryLabelColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x3c3c434c, 0xebebf54c); }
+UIColor *UIColorQuaternaryLabelColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x3c3c432d, 0xebebf52d); }
+
+UIColor *UIColorLinkColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x007affff, 0x0984ffff); }
+
+UIColor *UIColorPlaceholderTextColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x3c3c434c, 0xebebf54c); }
+
+UIColor *UIColorSeparatorColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x3c3c4349, 0x54545899); }
+UIColor *UIColorOpaqueSeparatorColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xc6c6c8ff, 0x38383aff); }
+
+UIColor *UIColorSystemBackgroundColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xffffffff, 0x000000ff); }
+UIColor *UIColorSecondarySystemBackgroundColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xf2f2f7ff, 0x1c1c1eff); }
+UIColor *UIColorTertiarySystemBackgroundColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xffffffff, 0x2c2c2eff); }
+
+UIColor *UIColorSystemGroupedBackgroundColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xf2f2f7ff, 0x000000ff); }
+UIColor *UIColorSecondarySystemGroupedBackgroundColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xffffffff, 0x1c1c1eff); }
+UIColor *UIColorTertiarySystemGroupedBackgroundColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0xf2f2f7ff, 0x2c2c2eff); }
+
+UIColor *UIColorSystemFillColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x78788033, 0x7878805b); }
+UIColor *UIColorSecondarySystemFillColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x78788028, 0x78788051); }
+UIColor *UIColorTertiarySystemFillColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x7676801e, 0x7676803d); }
+UIColor *UIColorQuaternarySystemFillColor(id self, SEL _cmd) { return UIColorLegacyColorForStyle(0x74748014, 0x7676802d); }
 
 #pragma mark - External Configuration -
 
