@@ -25,25 +25,25 @@ NS_ASSUME_NONNULL_BEGIN
 * In light styles: systemGray1 is slightly lighter than systemGray. systemGray2 is lighter than that, etc.
 * In dark styles: systemGray1 is slightly darker than systemGray. systemGray2 is darker than that, etc.
 */
-@property (class, nonatomic, readonly) UIColor *systemGray2Color;
-@property (class, nonatomic, readonly) UIColor *systemGray3Color;
-@property (class, nonatomic, readonly) UIColor *systemGray4Color;
-@property (class, nonatomic, readonly) UIColor *systemGray5Color;
-@property (class, nonatomic, readonly) UIColor *systemGray6Color;
+@property (class, nonatomic, readonly) UIColor *systemGray2Color NS_SWIFT_NAME(systemGray2);
+@property (class, nonatomic, readonly) UIColor *systemGray3Color NS_SWIFT_NAME(systemGray3);
+@property (class, nonatomic, readonly) UIColor *systemGray4Color NS_SWIFT_NAME(systemGray4);
+@property (class, nonatomic, readonly) UIColor *systemGray5Color NS_SWIFT_NAME(systemGray5);
+@property (class, nonatomic, readonly) UIColor *systemGray6Color NS_SWIFT_NAME(systemGray6);
 
 #pragma mark Foreground colors
 
 /** Foreground colors for static text and related elements. */
-@property (class, nonatomic, readonly) UIColor *labelColor;
-@property (class, nonatomic, readonly) UIColor *secondaryLabelColor;
-@property (class, nonatomic, readonly) UIColor *tertiaryLabelColor;
-@property (class, nonatomic, readonly) UIColor *quaternaryLabelColor;
+@property (class, nonatomic, readonly) UIColor *labelColor NS_SWIFT_NAME(label);
+@property (class, nonatomic, readonly) UIColor *secondaryLabelColor NS_SWIFT_NAME(secondaryLabel);
+@property (class, nonatomic, readonly) UIColor *tertiaryLabelColor NS_SWIFT_NAME(tertiaryLabel);
+@property (class, nonatomic, readonly) UIColor *quaternaryLabelColor NS_SWIFT_NAME(quaternaryLabel);
 
 /** Foreground color for standard system links. */
-@property (class, nonatomic, readonly) UIColor *linkColor;
+@property (class, nonatomic, readonly) UIColor *linkColor NS_SWIFT_NAME(link);
 
 /** Foreground color for placeholder text in controls or text fields or text views. */
-@property (class, nonatomic, readonly) UIColor *placeholderTextColor;
+@property (class, nonatomic, readonly) UIColor *placeholderTextColor NS_SWIFT_NAME(placeholderText);
 
 /**
 * Foreground colors for separators (thin border or divider lines).
@@ -51,8 +51,8 @@ NS_ASSUME_NONNULL_BEGIN
 * `opaqueSeparatorColor` is intended to look similar, but is guaranteed to be opaque, so it will
 * completely cover anything behind it.
 */
-@property (class, nonatomic, readonly) UIColor *separatorColor;
-@property (class, nonatomic, readonly) UIColor *opaqueSeparatorColor;
+@property (class, nonatomic, readonly) UIColor *separatorColor NS_SWIFT_NAME(separator);
+@property (class, nonatomic, readonly) UIColor *opaqueSeparatorColor NS_SWIFT_NAME(opaqueSeparator);
 
 #pragma mark Background Colors
 
@@ -71,18 +71,18 @@ NS_ASSUME_NONNULL_BEGIN
 *    Use this stack for views with standard table views, and designs which have a white
 *    primary background in light mode.
 */
-@property (class, nonatomic, readonly) UIColor *systemBackgroundColor;
-@property (class, nonatomic, readonly) UIColor *secondarySystemBackgroundColor;
-@property (class, nonatomic, readonly) UIColor *tertiarySystemBackgroundColor;
+@property (class, nonatomic, readonly) UIColor *systemBackgroundColor NS_SWIFT_NAME(systemBackground);
+@property (class, nonatomic, readonly) UIColor *secondarySystemBackgroundColor NS_SWIFT_NAME(secondarySystemBackground);
+@property (class, nonatomic, readonly) UIColor *tertiarySystemBackgroundColor NS_SWIFT_NAME(tertiarySystemBackground);
 
 /* 2. systemGroupedBackground
  *    Use this stack for views with grouped content, such as grouped tables and
  *    platter-based designs. These are like grouped table views, but you may use these
  *    colors in places where a table view wouldn't make sense.
  */
-@property (class, nonatomic, readonly) UIColor *systemGroupedBackgroundColor;
-@property (class, nonatomic, readonly) UIColor *secondarySystemGroupedBackgroundColor;
-@property (class, nonatomic, readonly) UIColor *tertiarySystemGroupedBackgroundColor;
+@property (class, nonatomic, readonly) UIColor *systemGroupedBackgroundColor NS_SWIFT_NAME(systemGroupedBackground);
+@property (class, nonatomic, readonly) UIColor *secondarySystemGroupedBackgroundColor NS_SWIFT_NAME(secondarySystemGroupedBackground);
+@property (class, nonatomic, readonly) UIColor *tertiarySystemGroupedBackgroundColor NS_SWIFT_NAME(tertiarySystemGroupedBackground);
 
 #pragma mark Fill Colors
 
@@ -93,25 +93,25 @@ NS_ASSUME_NONNULL_BEGIN
  * systemFillColor is appropriate for filling thin and small shapes.
  * Example: The track of a slider.
  */
-@property (class, nonatomic, readonly) UIColor *systemFillColor;
+@property (class, nonatomic, readonly) UIColor *systemFillColor NS_SWIFT_NAME(systemFill);
 
 /**
  * secondarySystemFillColor is appropriate for filling medium-size shapes.
  * Example: The background of a switch.
  */
-@property (class, nonatomic, readonly) UIColor *secondarySystemFillColor;
+@property (class, nonatomic, readonly) UIColor *secondarySystemFillColor NS_SWIFT_NAME(secondarySystemFill);
 
 /**
  * tertiarySystemFillColor is appropriate for filling large shapes.
  * Examples: Input fields, search bars, buttons.
  */
-@property (class, nonatomic, readonly) UIColor *tertiarySystemFillColor;
+@property (class, nonatomic, readonly) UIColor *tertiarySystemFillColor NS_SWIFT_NAME(tertiarySystemFill);
 
 /**
  * quaternarySystemFillColor is appropriate for filling large areas containing complex content.
  * Example: Expanded table cells.
  */
-@property (class, nonatomic, readonly) UIColor *quaternarySystemFillColor;
+@property (class, nonatomic, readonly) UIColor *quaternarySystemFillColor NS_SWIFT_NAME(quaternarySystemFill);
 
 @end
 
