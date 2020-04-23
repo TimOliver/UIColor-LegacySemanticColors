@@ -1,5 +1,5 @@
 //
-//  SceneDelegate.h
+//  AppDelegate.h
 //  LegacySemanticColors
 //
 //  Created by Tim Oliver on 23/4/20.
@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SceneDelegate : UIResponder <UIWindowSceneDelegate>
+@interface TOAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow * window;
+@property (nonatomic, strong) UIWindow *window;
 
 @end
 

@@ -7,28 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		222B2A912450AA2C00E1A12D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B2A902450AA2C00E1A12D /* AppDelegate.m */; };
-		222B2A942450AA2C00E1A12D /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B2A932450AA2C00E1A12D /* SceneDelegate.m */; };
-		222B2A972450AA2C00E1A12D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B2A962450AA2C00E1A12D /* ViewController.m */; };
-		222B2A9A2450AA2C00E1A12D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222B2A982450AA2C00E1A12D /* Main.storyboard */; };
+		222B2A912450AA2C00E1A12D /* TOAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B2A902450AA2C00E1A12D /* TOAppDelegate.m */; };
+		222B2A972450AA2C00E1A12D /* TOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B2A962450AA2C00E1A12D /* TOViewController.m */; };
 		222B2A9C2450AA2D00E1A12D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 222B2A9B2450AA2D00E1A12D /* Assets.xcassets */; };
 		222B2A9F2450AA2D00E1A12D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222B2A9D2450AA2D00E1A12D /* LaunchScreen.storyboard */; };
 		222B2AA22450AA2D00E1A12D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 222B2AA12450AA2D00E1A12D /* main.m */; };
+		223D358F2450B0B20059E498 /* TOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D358D2450B0B20059E498 /* TOCollectionViewCell.m */; };
+		223D35902450B0B20059E498 /* TOCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223D358E2450B0B20059E498 /* TOCollectionViewCell.xib */; };
+		223D35942451E4890059E498 /* UIColor+LegacySemanticColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D35932451E4890059E498 /* UIColor+LegacySemanticColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		222B2A8C2450AA2C00E1A12D /* LegacySemanticColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegacySemanticColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		222B2A8F2450AA2C00E1A12D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		222B2A902450AA2C00E1A12D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		222B2A922450AA2C00E1A12D /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
-		222B2A932450AA2C00E1A12D /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		222B2A952450AA2C00E1A12D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		222B2A962450AA2C00E1A12D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		222B2A992450AA2C00E1A12D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		222B2A8F2450AA2C00E1A12D /* TOAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOAppDelegate.h; sourceTree = "<group>"; };
+		222B2A902450AA2C00E1A12D /* TOAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOAppDelegate.m; sourceTree = "<group>"; };
+		222B2A952450AA2C00E1A12D /* TOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOViewController.h; sourceTree = "<group>"; };
+		222B2A962450AA2C00E1A12D /* TOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOViewController.m; sourceTree = "<group>"; };
 		222B2A9B2450AA2D00E1A12D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		222B2A9E2450AA2D00E1A12D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		222B2AA02450AA2D00E1A12D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		222B2AA12450AA2D00E1A12D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		223D358C2450B0B20059E498 /* TOCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOCollectionViewCell.h; sourceTree = "<group>"; };
+		223D358D2450B0B20059E498 /* TOCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOCollectionViewCell.m; sourceTree = "<group>"; };
+		223D358E2450B0B20059E498 /* TOCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TOCollectionViewCell.xib; sourceTree = "<group>"; };
+		223D35922451E4890059E498 /* UIColor+LegacySemanticColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+LegacySemanticColors.h"; sourceTree = "<group>"; };
+		223D35932451E4890059E498 /* UIColor+LegacySemanticColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LegacySemanticColors.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +48,7 @@
 		222B2A832450AA2C00E1A12D = {
 			isa = PBXGroup;
 			children = (
+				223D35912451E4070059E498 /* UIColor+LegacySemanticColors */,
 				222B2A8E2450AA2C00E1A12D /* LegacySemanticColors */,
 				222B2A8D2450AA2C00E1A12D /* Products */,
 			);
@@ -61,19 +65,28 @@
 		222B2A8E2450AA2C00E1A12D /* LegacySemanticColors */ = {
 			isa = PBXGroup;
 			children = (
-				222B2A8F2450AA2C00E1A12D /* AppDelegate.h */,
-				222B2A902450AA2C00E1A12D /* AppDelegate.m */,
-				222B2A922450AA2C00E1A12D /* SceneDelegate.h */,
-				222B2A932450AA2C00E1A12D /* SceneDelegate.m */,
-				222B2A952450AA2C00E1A12D /* ViewController.h */,
-				222B2A962450AA2C00E1A12D /* ViewController.m */,
-				222B2A982450AA2C00E1A12D /* Main.storyboard */,
+				222B2A8F2450AA2C00E1A12D /* TOAppDelegate.h */,
+				222B2A902450AA2C00E1A12D /* TOAppDelegate.m */,
+				222B2A952450AA2C00E1A12D /* TOViewController.h */,
+				222B2A962450AA2C00E1A12D /* TOViewController.m */,
+				223D358C2450B0B20059E498 /* TOCollectionViewCell.h */,
+				223D358D2450B0B20059E498 /* TOCollectionViewCell.m */,
+				223D358E2450B0B20059E498 /* TOCollectionViewCell.xib */,
 				222B2A9B2450AA2D00E1A12D /* Assets.xcassets */,
 				222B2A9D2450AA2D00E1A12D /* LaunchScreen.storyboard */,
 				222B2AA02450AA2D00E1A12D /* Info.plist */,
 				222B2AA12450AA2D00E1A12D /* main.m */,
 			);
 			path = LegacySemanticColors;
+			sourceTree = "<group>";
+		};
+		223D35912451E4070059E498 /* UIColor+LegacySemanticColors */ = {
+			isa = PBXGroup;
+			children = (
+				223D35922451E4890059E498 /* UIColor+LegacySemanticColors.h */,
+				223D35932451E4890059E498 /* UIColor+LegacySemanticColors.m */,
+			);
+			path = "UIColor+LegacySemanticColors";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,8 +147,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				222B2A9F2450AA2D00E1A12D /* LaunchScreen.storyboard in Resources */,
+				223D35902450B0B20059E498 /* TOCollectionViewCell.xib in Resources */,
 				222B2A9C2450AA2D00E1A12D /* Assets.xcassets in Resources */,
-				222B2A9A2450AA2C00E1A12D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,24 +159,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222B2A972450AA2C00E1A12D /* ViewController.m in Sources */,
-				222B2A912450AA2C00E1A12D /* AppDelegate.m in Sources */,
+				222B2A972450AA2C00E1A12D /* TOViewController.m in Sources */,
+				222B2A912450AA2C00E1A12D /* TOAppDelegate.m in Sources */,
 				222B2AA22450AA2D00E1A12D /* main.m in Sources */,
-				222B2A942450AA2C00E1A12D /* SceneDelegate.m in Sources */,
+				223D35942451E4890059E498 /* UIColor+LegacySemanticColors.m in Sources */,
+				223D358F2450B0B20059E498 /* TOCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		222B2A982450AA2C00E1A12D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				222B2A992450AA2C00E1A12D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		222B2A9D2450AA2D00E1A12D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,7 +298,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				INFOPLIST_FILE = LegacySemanticColors/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -310,7 +316,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				INFOPLIST_FILE = LegacySemanticColors/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
