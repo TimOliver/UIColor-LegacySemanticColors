@@ -15,6 +15,9 @@
 		223D358F2450B0B20059E498 /* TOCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D358D2450B0B20059E498 /* TOCollectionViewCell.m */; };
 		223D35902450B0B20059E498 /* TOCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223D358E2450B0B20059E498 /* TOCollectionViewCell.xib */; };
 		223D35942451E4890059E498 /* UIColor+LegacySemanticColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D35932451E4890059E498 /* UIColor+LegacySemanticColors.m */; };
+		223D35982451FE070059E498 /* TOCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D35962451FE070059E498 /* TOCollectionHeaderView.m */; };
+		223D35992451FE070059E498 /* TOCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223D35972451FE070059E498 /* TOCollectionHeaderView.xib */; };
+		22509EE32452053600989363 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22509EE22452053600989363 /* Colors.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,10 @@
 		223D358E2450B0B20059E498 /* TOCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TOCollectionViewCell.xib; sourceTree = "<group>"; };
 		223D35922451E4890059E498 /* UIColor+LegacySemanticColors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+LegacySemanticColors.h"; sourceTree = "<group>"; };
 		223D35932451E4890059E498 /* UIColor+LegacySemanticColors.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LegacySemanticColors.m"; sourceTree = "<group>"; };
+		223D35952451FE070059E498 /* TOCollectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOCollectionHeaderView.h; sourceTree = "<group>"; };
+		223D35962451FE070059E498 /* TOCollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOCollectionHeaderView.m; sourceTree = "<group>"; };
+		223D35972451FE070059E498 /* TOCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TOCollectionHeaderView.xib; sourceTree = "<group>"; };
+		22509EE22452053600989363 /* Colors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,10 +79,14 @@
 				223D358C2450B0B20059E498 /* TOCollectionViewCell.h */,
 				223D358D2450B0B20059E498 /* TOCollectionViewCell.m */,
 				223D358E2450B0B20059E498 /* TOCollectionViewCell.xib */,
+				223D35952451FE070059E498 /* TOCollectionHeaderView.h */,
+				223D35962451FE070059E498 /* TOCollectionHeaderView.m */,
+				223D35972451FE070059E498 /* TOCollectionHeaderView.xib */,
 				222B2A9B2450AA2D00E1A12D /* Assets.xcassets */,
 				222B2A9D2450AA2D00E1A12D /* LaunchScreen.storyboard */,
 				222B2AA02450AA2D00E1A12D /* Info.plist */,
 				222B2AA12450AA2D00E1A12D /* main.m */,
+				22509EE22452053600989363 /* Colors.plist */,
 			);
 			path = LegacySemanticColors;
 			sourceTree = "<group>";
@@ -148,6 +159,8 @@
 			files = (
 				222B2A9F2450AA2D00E1A12D /* LaunchScreen.storyboard in Resources */,
 				223D35902450B0B20059E498 /* TOCollectionViewCell.xib in Resources */,
+				22509EE32452053600989363 /* Colors.plist in Resources */,
+				223D35992451FE070059E498 /* TOCollectionHeaderView.xib in Resources */,
 				222B2A9C2450AA2D00E1A12D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -163,6 +176,7 @@
 				222B2A912450AA2C00E1A12D /* TOAppDelegate.m in Sources */,
 				222B2AA22450AA2D00E1A12D /* main.m in Sources */,
 				223D35942451E4890059E498 /* UIColor+LegacySemanticColors.m in Sources */,
+				223D35982451FE070059E498 /* TOCollectionHeaderView.m in Sources */,
 				223D358F2450B0B20059E498 /* TOCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

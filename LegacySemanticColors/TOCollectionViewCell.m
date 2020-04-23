@@ -25,6 +25,9 @@
     self.textLabel.frame = frame;
     
     self.textLabel.center = (CGPoint){size.width * 0.5f, self.colorView.frame.size.height + 27.0f};
+    
+    self.colorView.layer.borderColor = [UIColor colorWithWhite:0.5f alpha:0.1f].CGColor;
+    self.colorView.layer.borderWidth = 1.0f;
 }
 
 - (CGSize)sizeThatFits:(CGSize)size
