@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>System Background</key>
+	<array>
+		<string>systemBackground</string>
+		<string>secondarySystemBackground</string>
+		<string>tertiarySystemBackground</string>
+	</array>
+	<key>System Grouped Background</key>
+	<array>
+		<string>systemGroupedBackground</string>
+		<string>secondarySystemGroupedBackground</string>
+		<string>tertiarySystemGroupedBackground</string>
+	</array>
+	<key>Labels</key>
+	<array>
+		<string>label</string>
+		<string>secondaryLabel</string>
+		<string>tertiaryLabel</string>
+		<string>quaternaryLabel</string>
+		<string>link</string>
+		<string>placeholderText</string>
+	</array>
+	<key>Separators</key>
+	<array>
+		<string>separator</string>
+		<string>opaqueSeparator</string>
+	</array>
+	<key>Fill</key>
+	<array>
+		<string>systemFill</string>
+		<string>secondarySystemFill</string>
+		<string>tertiarySystemFill</string>
+		<string>quaternarySystemFill</string>
+	</array>
+</dict>
+</plist>

@@ -8,6 +8,9 @@
 
 #import "TOViewController.h"
 #import "TOCollectionViewCell.h"
+#import "TOCollectionHeaderView.h"
+
+#import "UIColor+LegacySemanticColors.h"
 
 @interface UIColor (LegacySemanticColor)
 
@@ -19,6 +22,8 @@
 @interface TOViewController () <UICollectionViewDelegateFlowLayout>
 
 @property (nonatomic, readonly) UICollectionViewFlowLayout *flowLayout;
+
+@property (nonatomic, strong) NSDictionary *colorsList;
 
 @end
 
@@ -38,6 +43,9 @@
     
     self.title = @"Semantic Colors";
     
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Colors" ofType:@"plist"];
+    self.colorsList = [[NSDictionary alloc] initWithContentsOfFile:filePath];
+    
     if (@available(iOS 11.0, *)) {
         self.navigationController.navigationBar.prefersLargeTitles = YES;
         self.navigationItem.largeTitleDisplayMode = UINavigationItemLargeTitleDisplayModeAlways;
@@ -53,9 +61,15 @@
     UINib *nib = [UINib nibWithNibName:@"TOCollectionViewCell" bundle:nil];
     [self.collectionView registerNib:nib forCellWithReuseIdentifier:@"TOCollectionViewCell"];
 
+    nib = [UINib nibWithNibName:@"TOCollectionHeaderView" bundle:nil];
+    [self.collectionView registerNib:nib
+          forSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                 withReuseIdentifier:@"TOCollectionHeaderView"];
+    
     self.flowLayout.estimatedItemSize = UICollectionViewFlowLayoutAutomaticSize;
     self.flowLayout.minimumInteritemSpacing = 20.0f;
     self.flowLayout.minimumLineSpacing = 20.0f;
+    self.flowLayout.headerReferenceSize = CGSizeMake(0, 54);
     [self updateCollectionViewInset];
 }
 
@@ -68,10 +82,10 @@
 - (void)updateCollectionViewInset
 {
     if (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassRegular) {
-        self.flowLayout.sectionInset = (UIEdgeInsets){30, 30, 30, 30};
+        self.flowLayout.sectionInset = (UIEdgeInsets){0, 30, 30, 30};
     }
     else {
-        self.flowLayout.sectionInset = (UIEdgeInsets){10, 10, 10, 10};
+        self.flowLayout.sectionInset = (UIEdgeInsets){0, 10, 10, 10};
     }
 }
 
@@ -79,19 +93,40 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return self.colorsList.allKeys.count;
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 10;
+    NSString *keyName = self.colorsList.allKeys[section];
+    return [self.colorsList[keyName] count];
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
                            cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    TOCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TOCollectionViewCell" forIndexPath:indexPath];
+    TOCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TOCollectionViewCell"
+                                                                           forIndexPath:indexPath];
+    
+    NSString *keyName = self.colorsList.allKeys[indexPath.section];
+    NSString *colorName = self.colorsList[keyName][indexPath.row];
+    
+    colorName = [colorName stringByAppendingString:@"Color"];
+    cell.colorView.backgroundColor = [UIColor performSelector:NSSelectorFromString(colorName)];
+    cell.textLabel.text = colorName;
+    
     return cell;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath
+{
+    TOCollectionHeaderView *headerView = (TOCollectionHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
+                                                                                                      withReuseIdentifier:@"TOCollectionHeaderView"
+                                                                                                             forIndexPath:indexPath];
+    headerView.titleLabel.text = self.colorsList.allKeys[indexPath.section];
+    return headerView;
 }
 
 #pragma mark - Delegate -
