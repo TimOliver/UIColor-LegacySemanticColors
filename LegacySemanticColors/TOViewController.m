@@ -71,6 +71,20 @@
     self.flowLayout.minimumLineSpacing = 20.0f;
     self.flowLayout.headerReferenceSize = CGSizeMake(0, 54);
     [self updateCollectionViewInset];
+    
+    // Set up segmented control
+    UISegmentedControl *segmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"Light", @"Dark"]];
+    if (self.view.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark) {
+        segmentedControl.selectedSegmentIndex = 1;
+    }
+    else {
+        segmentedControl.selectedSegmentIndex = 0;
+    }
+    [segmentedControl addTarget:self
+                         action:@selector(segmentedControlChanged:)
+               forControlEvents:UIControlEventValueChanged];
+    [segmentedControl sizeToFit];
+    self.navigationItem.titleView = segmentedControl;
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
@@ -87,6 +101,40 @@
     else {
         self.flowLayout.sectionInset = (UIEdgeInsets){0, 10, 10, 10};
     }
+}
+
+#pragma mark - Theme Swapping -
+
+- (void)segmentedControlChanged:(UISegmentedControl *)segmentedControl
+{
+    UIUserInterfaceStyle style = UIUserInterfaceStyleLight;
+    if (segmentedControl.selectedSegmentIndex == 1) {
+        style = UIUserInterfaceStyleDark;
+    }
+    
+    // Set override theme on iOS 13
+    if (@available(iOS 13.0, *)) {
+        self.navigationController.overrideUserInterfaceStyle = style;
+        return;
+    }
+    
+    // Perform manual view update on iOS 12
+    [UIColor setLegacyInterfaceStyle:style];
+    
+    UIBarStyle barStyle = UIBarStyleDefault;
+    if (style == UIUserInterfaceStyleDark) {
+        barStyle = UIBarStyleBlack;
+    }
+    self.navigationController.navigationBar.barStyle = barStyle;
+    [self.collectionView reloadData];
+    self.collectionView.backgroundColor = [UIColor systemBackgroundColor];
+    
+    self.collectionView.indicatorStyle = UIScrollViewIndicatorStyleDefault;
+    if (style == UIUserInterfaceStyleDark) {
+        self.collectionView.indicatorStyle = UIScrollViewIndicatorStyleWhite;
+    }
+    
+    self.navigationController.view.tintColor = [UIColor systemBlueColor];
 }
 
 #pragma mark - Data Source -
@@ -114,6 +162,7 @@
     colorName = [colorName stringByAppendingString:@"Color"];
     cell.colorView.backgroundColor = [UIColor performSelector:NSSelectorFromString(colorName)];
     cell.textLabel.text = colorName;
+    cell.textLabel.textColor = [UIColor labelColor];
     
     return cell;
 }
@@ -126,6 +175,8 @@
                                                                                                       withReuseIdentifier:@"TOCollectionHeaderView"
                                                                                                              forIndexPath:indexPath];
     headerView.titleLabel.text = self.colorsList.allKeys[indexPath.section];
+    headerView.titleLabel.textColor = [UIColor labelColor];
+    [headerView setNeedsLayout];
     return headerView;
 }
 

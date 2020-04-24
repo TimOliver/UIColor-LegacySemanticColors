@@ -12,13 +12,14 @@
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
     UICollectionView *collectionView = (UICollectionView *)self.superview;
     UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)collectionView.collectionViewLayout;
     UIEdgeInsets insets = flowLayout.sectionInset;
     
     [self.titleLabel sizeToFit];
     CGRect frame = self.titleLabel.frame;
-    frame.origin.x = insets.left;
+    frame.origin.x = 16.0f;
     self.titleLabel.frame = frame;
 }
 
