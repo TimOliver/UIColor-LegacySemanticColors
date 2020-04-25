@@ -1,7 +1,6 @@
-# UIColor-LegacySemanticColors
-A UIColor category that backports the new semantic colors of iOS 13 to iOS 12.
-
 <img src="https://github.com/TimOliver/UIColor-LegacySemanticColors/raw/master/screenshot.jpg" align="right" width="400" />
+
+# UIColor-LegacySemanticColors
 
 [![Version](https://img.shields.io/cocoapods/v/UIColor-LegacySemanticColors.svg?style=flat)](http://cocoadocs.org/docsets/UIColor-LegacySemanticColors)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/TimOliver/UIColor-LegacySemanticColors/master/LICENSE)
