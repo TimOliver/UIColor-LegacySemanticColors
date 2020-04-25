@@ -55,7 +55,7 @@
 		222B2A832450AA2C00E1A12D = {
 			isa = PBXGroup;
 			children = (
-				223D35912451E4070059E498 /* UIColor+LegacySemanticColors */,
+				223D35912451E4070059E498 /* UIColor-LegacySemanticColors */,
 				222B2A8E2450AA2C00E1A12D /* LegacySemanticColors */,
 				222B2A8D2450AA2C00E1A12D /* Products */,
 			);
@@ -91,13 +91,13 @@
 			path = LegacySemanticColors;
 			sourceTree = "<group>";
 		};
-		223D35912451E4070059E498 /* UIColor+LegacySemanticColors */ = {
+		223D35912451E4070059E498 /* UIColor-LegacySemanticColors */ = {
 			isa = PBXGroup;
 			children = (
 				223D35922451E4890059E498 /* UIColor+LegacySemanticColors.h */,
 				223D35932451E4890059E498 /* UIColor+LegacySemanticColors.m */,
 			);
-			path = "UIColor+LegacySemanticColors";
+			path = "UIColor-LegacySemanticColors";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
