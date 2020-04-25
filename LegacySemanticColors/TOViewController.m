@@ -155,13 +155,13 @@
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return self.colorsList.allKeys.count;
+    return [self.colorsList[@"Colors"] count];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    NSString *keyName = self.colorsList.allKeys[section];
-    return [self.colorsList[keyName] count];
+    NSArray *colors = self.colorsList[@"Colors"];
+    return [colors[section] count];
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView
@@ -170,8 +170,8 @@
     TOCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"TOCollectionViewCell"
                                                                            forIndexPath:indexPath];
     
-    NSString *keyName = self.colorsList.allKeys[indexPath.section];
-    NSString *colorName = self.colorsList[keyName][indexPath.row];
+    NSArray *colors = self.colorsList[@"Colors"][indexPath.section];
+    NSString *colorName = colors[indexPath.row];
     
     colorName = [colorName stringByAppendingString:@"Color"];
     cell.colorView.backgroundColor = [UIColor performSelector:NSSelectorFromString(colorName)];
@@ -188,7 +188,7 @@
     TOCollectionHeaderView *headerView = (TOCollectionHeaderView *)[collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionHeader
                                                                                                       withReuseIdentifier:@"TOCollectionHeaderView"
                                                                                                              forIndexPath:indexPath];
-    headerView.titleLabel.text = self.colorsList.allKeys[indexPath.section];
+    headerView.titleLabel.text = self.colorsList[@"SectionNames"][indexPath.section];
     headerView.titleLabel.textColor = [UIColor labelColor];
     [headerView setNeedsLayout];
     return headerView;

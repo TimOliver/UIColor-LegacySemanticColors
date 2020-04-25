@@ -2,59 +2,65 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>System Background</key>
+	<key>SectionNames</key>
 	<array>
-		<string>systemBackground</string>
-		<string>secondarySystemBackground</string>
-		<string>tertiarySystemBackground</string>
-	</array>
-	<key>System Grouped Background</key>
-	<array>
-		<string>systemGroupedBackground</string>
-		<string>secondarySystemGroupedBackground</string>
-		<string>tertiarySystemGroupedBackground</string>
-	</array>
-	<key>Labels</key>
-	<array>
-		<string>label</string>
-		<string>secondaryLabel</string>
-		<string>tertiaryLabel</string>
-		<string>quaternaryLabel</string>
-		<string>link</string>
-		<string>placeholderText</string>
-	</array>
-	<key>Separators</key>
-	<array>
-		<string>separator</string>
-		<string>opaqueSeparator</string>
-	</array>
-	<key>Fill</key>
-	<array>
-		<string>systemFill</string>
-		<string>secondarySystemFill</string>
-		<string>tertiarySystemFill</string>
-		<string>quaternarySystemFill</string>
-	</array>
-	<key>Grays</key>
-	<array>
-		<string>systemGray</string>
-		<string>systemGray2</string>
-		<string>systemGray3</string>
-		<string>systemGray4</string>
-		<string>systemGray5</string>
-		<string>systemGray6</string>
+		<string>Labels</string>
+		<string>System Background</string>
+		<string>System Grouped Background</string>
+		<string>Separators</string>
+		<string>Fill</string>
+		<string>Grays</string>
+		<string>Colors</string>
 	</array>
 	<key>Colors</key>
 	<array>
-		<string>systemRed</string>
-		<string>systemGreen</string>
-		<string>systemBlue</string>
-		<string>systemOrange</string>
-		<string>systemYellow</string>
-		<string>systemPink</string>
-		<string>systemPurple</string>
-		<string>systemTeal</string>
-		<string>systemIndigo</string>
+		<array>
+			<string>label</string>
+			<string>secondaryLabel</string>
+			<string>tertiaryLabel</string>
+			<string>quaternaryLabel</string>
+			<string>link</string>
+			<string>placeholderText</string>
+		</array>
+		<array>
+			<string>systemBackground</string>
+			<string>secondarySystemBackground</string>
+			<string>tertiarySystemBackground</string>
+		</array>
+		<array>
+			<string>systemGroupedBackground</string>
+			<string>secondarySystemGroupedBackground</string>
+			<string>tertiarySystemGroupedBackground</string>
+		</array>
+		<array>
+			<string>separator</string>
+			<string>opaqueSeparator</string>
+		</array>
+		<array>
+			<string>systemFill</string>
+			<string>secondarySystemFill</string>
+			<string>tertiarySystemFill</string>
+			<string>quaternarySystemFill</string>
+		</array>
+		<array>
+			<string>systemGray</string>
+			<string>systemGray2</string>
+			<string>systemGray3</string>
+			<string>systemGray4</string>
+			<string>systemGray5</string>
+			<string>systemGray6</string>
+		</array>
+		<array>
+			<string>systemRed</string>
+			<string>systemGreen</string>
+			<string>systemBlue</string>
+			<string>systemOrange</string>
+			<string>systemYellow</string>
+			<string>systemPink</string>
+			<string>systemPurple</string>
+			<string>systemTeal</string>
+			<string>systemIndigo</string>
+		</array>
 	</array>
 </dict>
 </plist>
