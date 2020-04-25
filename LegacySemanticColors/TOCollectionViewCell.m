@@ -28,6 +28,10 @@
     
     self.colorView.layer.borderColor = [UIColor colorWithWhite:0.5f alpha:0.1f].CGColor;
     self.colorView.layer.borderWidth = 1.0f;
+    
+    if (@available(iOS 13.0, *)) {
+        self.colorView.layer.cornerCurve = kCACornerCurveContinuous;
+    }
 }
 
 - (CGSize)sizeThatFits:(CGSize)size
