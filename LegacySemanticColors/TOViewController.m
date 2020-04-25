@@ -85,6 +85,20 @@
                forControlEvents:UIControlEventValueChanged];
     [segmentedControl sizeToFit];
     self.navigationItem.titleView = segmentedControl;
+    
+    if (@available(iOS 13.0, *)) {
+        UIView *separatorView = [[UIView alloc] initWithFrame:CGRectZero];
+        separatorView.backgroundColor = [UIColor separatorColor];
+        separatorView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [self.collectionView addSubview:separatorView];
+        
+        CGRect frame = CGRectZero;
+        frame.size.height = 1.0f / UIScreen.mainScreen.nativeScale;
+        frame.origin.x = 20.0f;
+        frame.origin.y = 0;
+        frame.size.width = self.view.frame.size.width - 40.0f;
+        separatorView.frame = frame;
+    }
 }
 
 - (void)traitCollectionDidChange:(UITraitCollection *)previousTraitCollection
