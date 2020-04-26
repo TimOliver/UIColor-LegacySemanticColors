@@ -2,7 +2,7 @@
 
 # UIColor-LegacySemanticColors
 
-[![Version](https://img.shields.io/cocoapods/v/UIColor-LegacySemanticColors.svg?style=flat)](http://cocoadocs.org/docsets/UIColor-LegacySemanticColors)
+[![Version](https://img.shields.io/cocoapods/v/UIColor+LegacySemanticColors.svg?style=flat)](http://cocoadocs.org/docsets/UIColor+LegacySemanticColors)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/TimOliver/UIColor-LegacySemanticColors/master/LICENSE)
 [![PayPal](https://img.shields.io/badge/paypal-donate-blue.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M4RKULAVKV7K8)
 [![Twitch](https://img.shields.io/badge/twitch-timXD-6441a5.svg)](http://twitch.tv/timXD)
@@ -23,6 +23,7 @@ The goal of this library is to simplify Dark Mode in iOS 13, while also supporti
 ## Requirements
 * iOS 12.0 
 * Xcode 11.0 or higher
+* Objective-C only (I sadly discovered it doesn't work in Swift... 😅)
 
 ## Installation Instructions
 
@@ -56,16 +57,6 @@ The API behaves just like the official one in iOS 13.
 
 // Get the default label color
 UIColor *labelColor = [UIColor labelColor];
-```
-
-### Swift
-
-```swift
-// Set all returned colors to be dark variants
-UIColor.setLegacyInterfaceStyle(.dark)
-
-// Get the default label color
-let labelColor = UIColor.label
 ```
 
 ## Credits
