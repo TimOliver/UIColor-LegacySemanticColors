@@ -18,6 +18,7 @@
 		223D35982451FE070059E498 /* TOCollectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 223D35962451FE070059E498 /* TOCollectionHeaderView.m */; };
 		223D35992451FE070059E498 /* TOCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 223D35972451FE070059E498 /* TOCollectionHeaderView.xib */; };
 		22509EE32452053600989363 /* Colors.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22509EE22452053600989363 /* Colors.plist */; };
+		22975732245572B4006BF7A9 /* UIColor+LegacySemanticColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22975731245572B4006BF7A9 /* UIColor+LegacySemanticColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		223D35962451FE070059E498 /* TOCollectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOCollectionHeaderView.m; sourceTree = "<group>"; };
 		223D35972451FE070059E498 /* TOCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TOCollectionHeaderView.xib; sourceTree = "<group>"; };
 		22509EE22452053600989363 /* Colors.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Colors.plist; sourceTree = "<group>"; };
+		22975730245572B4006BF7A9 /* LegacySemanticColors-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LegacySemanticColors-Bridging-Header.h"; sourceTree = "<group>"; };
+		22975731245572B4006BF7A9 /* UIColor+LegacySemanticColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+LegacySemanticColors.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +90,7 @@
 				222B2AA02450AA2D00E1A12D /* Info.plist */,
 				222B2AA12450AA2D00E1A12D /* main.m */,
 				22509EE22452053600989363 /* Colors.plist */,
+				22975730245572B4006BF7A9 /* LegacySemanticColors-Bridging-Header.h */,
 			);
 			path = LegacySemanticColors;
 			sourceTree = "<group>";
@@ -96,6 +100,7 @@
 			children = (
 				223D35922451E4890059E498 /* UIColor+LegacySemanticColors.h */,
 				223D35932451E4890059E498 /* UIColor+LegacySemanticColors.m */,
+				22975731245572B4006BF7A9 /* UIColor+LegacySemanticColors.swift */,
 			);
 			path = "UIColor-LegacySemanticColors";
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				TargetAttributes = {
 					222B2A8B2450AA2C00E1A12D = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -172,6 +178,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22975732245572B4006BF7A9 /* UIColor+LegacySemanticColors.swift in Sources */,
 				222B2A972450AA2C00E1A12D /* TOViewController.m in Sources */,
 				222B2A912450AA2C00E1A12D /* TOAppDelegate.m in Sources */,
 				222B2AA22450AA2D00E1A12D /* main.m in Sources */,
@@ -309,6 +316,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				INFOPLIST_FILE = LegacySemanticColors/Info.plist;
@@ -319,6 +327,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.LegacySemanticColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UIColor-LegacySemanticColors/LegacySemanticColors-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -327,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				INFOPLIST_FILE = LegacySemanticColors/Info.plist;
@@ -337,6 +349,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.LegacySemanticColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "UIColor-LegacySemanticColors/LegacySemanticColors-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
